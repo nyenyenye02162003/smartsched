@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in — SmartSched</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      if (localStorage.getItem("loggedIn") === "true" && localStorage.getItem("acadex_token")) {
+        location.replace("index.html");
+      }
+    })();
+  </script>
+</head>
+
+<body class="login-body">
+
+  <div class="login-shell">
+    <aside class="login-hero" aria-label="Product introduction">
+      <div class="login-hero-bg" aria-hidden="true"></div>
+      <div class="login-hero-inner">
+        <div class="login-hero-mark">
+          <img src="img/smartsched-mark.svg" alt="" class="login-hero-logo" width="200" height="200" decoding="async" fetchpriority="high">
+        </div>
+        <p class="login-hero-eyebrow">Academic scheduling</p>
+        <h1 class="login-hero-title">SmartSched</h1>
+        <p class="login-hero-lead">Coordinate rooms, faculty, and class times without double-booking — built for your registrar workflow.</p>
+        <ul class="login-hero-list">
+          <li>
+            <span class="login-hero-check" aria-hidden="true">✓</span>
+            Calendar-style scheduling
+          </li>
+          <li>
+            <span class="login-hero-check" aria-hidden="true">✓</span>
+            Official curriculum catalog
+          </li>
+          <li>
+            <span class="login-hero-check" aria-hidden="true">✓</span>
+            Conflict-aware room &amp; faculty slots
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="login-main">
+      <div class="login-card login-card-elevated">
+        <header class="login-card-header">
+          <img src="img/smartsched-mark.svg" alt="" class="login-card-logo" width="200" height="200" decoding="async">
+          <h2 class="login-card-title">Welcome back</h2>
+          <p class="login-card-sub">Registrar admin or faculty (published schedules only)</p>
+        </header>
+
+        <form id="loginForm" class="login-form">
+          <div class="login-field">
+            <label class="login-label" for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" placeholder="admin or prof.turing" required>
+          </div>
+          <div class="login-field">
+            <label class="login-label" for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="login-submit">
+            <span>Sign in</span>
+            <svg class="login-submit-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/login.js"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", login);
+  </script>
+</body>
+</html>

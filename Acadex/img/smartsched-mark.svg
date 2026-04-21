@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="ssTitle">
+  <title id="ssTitle">SmartSched</title>
+  <defs>
+    <linearGradient id="ssBg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0369a1"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#ssBg)"/>
+  <rect x="30" y="42" width="68" height="70" rx="12" fill="#ffffff"/>
+  <rect x="30" y="42" width="68" height="22" rx="12" fill="#e0f2fe"/>
+  <path d="M46 34v-12M82 34v-12" stroke="#bae6fd" stroke-width="7" stroke-linecap="round"/>
+  <rect x="42" y="76" width="20" height="16" rx="4" fill="#0284c7"/>
+  <rect x="66" y="76" width="20" height="16" rx="4" fill="#0284c7" opacity="0.45"/>
+  <rect x="42" y="98" width="20" height="10" rx="2" fill="#94a3b8"/>
+  <rect x="66" y="98" width="20" height="10" rx="2" fill="#94a3b8" opacity="0.7"/>
+</svg>
